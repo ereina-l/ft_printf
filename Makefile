@@ -6,7 +6,7 @@
 #    By: ereina-l <ereina-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 13:04:02 by ereina-l          #+#    #+#              #
-#    Updated: 2024/10/14 13:38:34 by ereina-l         ###   ########.fr        #
+#    Updated: 2024/10/15 13:14:56 by ereina-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,16 +21,16 @@ OBJ = $(SRC:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-		ar rcs $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 %.o : %.c
-		$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-		rm -f $(OBJ)
+	rm -f $(OBJ)
 		
 fclean:
-		rm -f $(NAME) $(OBJ)
+	rm -f $(NAME) $(OBJ)
 
 re: fclean all
 
