@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   characters_utils.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ereina-l <ereina-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 12:58:00 by ereina-l          #+#    #+#             */
-/*   Updated: 2024/10/16 12:39:53 by ereina-l         ###   ########.fr       */
+/*   Created: 2024/10/16 12:23:36 by ereina-l          #+#    #+#             */
+/*   Updated: 2024/10/16 12:50:07 by ereina-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdarg.h>
+int	ft_print_char(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+int	ft_print_str(char *str)
+{
+	int	count;
+	int	i;
 
-int	ft_print_char(int c);
-int	ft_print_str(char *str);
-
-#endif
-
-
-
+	i = 0;
+	count = 0;
+	if (!str)
+		return (0);
+	while (str[i])
+	{
+		count += ft_print_char(str[i]);
+		i++;
+	}
+	return (count);
+}
