@@ -6,7 +6,7 @@
 #    By: ereina-l <ereina-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 13:04:02 by ereina-l          #+#    #+#              #
-#    Updated: 2024/10/16 13:00:46 by ereina-l         ###   ########.fr        #
+#    Updated: 2024/10/18 12:29:16 by ereina-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
 
-SRC = ft_printf.c characters.utils.c
+SRC = ft_printf.c characters.utils.c digits_utils.c
 
 OBJ = $(SRC:.c=.o)
 
