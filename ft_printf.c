@@ -6,7 +6,7 @@
 /*   By: ereina-l <ereina-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:16:35 by ereina-l          #+#    #+#             */
-/*   Updated: 2024/10/18 16:47:08 by ereina-l         ###   ########.fr       */
+/*   Updated: 2024/10/18 17:00:37 by ereina-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,11 @@ int	main(void)
 	int rettr;
 	int ptr = 42;
 
-	ret = ft_printf("lower: %x\nupper: %X\n pointer: %p\n percent: %%", 1234, 1234, &ptr);
+	ret = ft_printf("lower: %x\nupper: \
+	 %X\n pointer: %p\n percent: %%", 1234, 1234, &ptr);
 	printf("el valor de retorno es: %d\n", ret);
-	rettr = printf("lower: %x\nupper: %X\n pointer: %p\n percent: %%", 1234, 1234, &ptr);
+	rettr = printf("lower: %x\nupper: \
+	%X\n pointer: %p\n percent: %%", 1234, 1234, &ptr);
 	printf("el valor de retorno es: %d\n", rettr);
 	return (0);
 } */
