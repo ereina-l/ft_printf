@@ -6,7 +6,7 @@
 /*   By: ereina-l <ereina-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:50:27 by ereina-l          #+#    #+#             */
-/*   Updated: 2024/10/19 12:33:24 by ereina-l         ###   ########.fr       */
+/*   Updated: 2024/10/19 12:36:42 by ereina-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	ft_putnbr(int n, int *count)
 		*count += write(1, &n, 1);
 	}
 }
+
 void	ft_putunsigned(unsigned int n, int *count)
 {
 	if (n > 9)
