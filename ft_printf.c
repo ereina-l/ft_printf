@@ -6,7 +6,7 @@
 /*   By: ereina-l <ereina-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:16:35 by ereina-l          #+#    #+#             */
-/*   Updated: 2024/10/18 17:00:37 by ereina-l         ###   ########.fr       */
+/*   Updated: 2024/10/19 12:27:44 by ereina-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	ft_sort(char c, va_list lst, int *count)
 		ft_puthex(va_arg(lst, unsigned int), count, true);
 	else if (c == 'p')
 		ft_putptr(va_arg(lst, unsigned long long), count);
+	else if (c == 'u')
+		ft_putunsigned(va_arg(lst, unsigned int), count);
 	else if (c == '%')
 		*count += ft_print_char(c);
 }
