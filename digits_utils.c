@@ -6,7 +6,7 @@
 /*   By: ereina-l <ereina-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:50:27 by ereina-l          #+#    #+#             */
-/*   Updated: 2024/10/19 12:36:42 by ereina-l         ###   ########.fr       */
+/*   Updated: 2024/10/25 10:52:57 by ereina-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,13 @@ void	ft_puthex(unsigned long long n, int *count, bool caps)
 
 void	ft_putptr(unsigned long long ptr, int *count)
 {
-	*count += ft_print_str("0x");
-	ft_puthex(ptr, count, false);
+	if (ptr == 0)
+	{
+		*count += ft_print_str("(nil)");
+	}
+	else
+	{
+		*count += ft_print_str("0x");
+		ft_puthex(ptr, count, false);
+	}
 }

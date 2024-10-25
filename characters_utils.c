@@ -6,7 +6,7 @@
 /*   By: ereina-l <ereina-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 12:23:36 by ereina-l          #+#    #+#             */
-/*   Updated: 2024/10/18 16:29:37 by ereina-l         ###   ########.fr       */
+/*   Updated: 2024/10/25 10:18:24 by ereina-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ int	ft_print_str(char *str)
 	i = 0;
 	count = 0;
 	if (!str)
-		return (0);
+	{
+		count += ft_print_str("(null)");
+		return (count);
+	}
 	while (str[i])
 	{
 		count += ft_print_char(str[i]);
